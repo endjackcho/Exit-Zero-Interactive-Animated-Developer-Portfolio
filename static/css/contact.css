@@ -1,4 +1,4 @@
-:root{
+:root {
   --main_background: #080a0b;
 }
 
@@ -235,40 +235,42 @@ h1 .dots {
   border: 1px solid var(--border_2);
   border-radius: 20px;
   color: var(--clr);
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.end a:hover{
+.end a:hover {
   transform: translateY(-10px) scale(1.06);
 }
 
-.arrow{
-    position: fixed;
-    bottom: 40px;
-    right: 20px;
-    background: var(--border_1);
-    border: 1px solid var(--border_2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    padding: 20px;
-    border-radius: 50%;
-    transition: .5s;
+.arrow {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background: var(--border_1);
+  border: 1px solid var(--border_2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 50%;
+  transition: 0.5s;
 }
 
-.arrow:hover{
-    transform: scale(1.06);
+.arrow:hover {
+  transform: scale(1.06);
 }
-
 
 @media (max-width: 600px) {
-  header{
+  h1 .dots {
+    display: none;
+  }
+  header {
     padding: 0 50px;
   }
-  body{
-    --light:transparent;
+  body {
+    --light: transparent;
   }
   .count main .formbox {
     width: 80%;
@@ -283,12 +285,23 @@ h1 .dots {
     font-size: 1em;
   }
 
-  .formbox input, .formbox textarea, .formbox .btn{
+  .formbox input,
+  .formbox textarea,
+  .formbox .btn {
     font-size: 17px;
   }
 
-  .formbox .btn, .formbox input{
+  .formbox .btn,
+  .formbox input {
     height: 50px;
     border-radius: 25px;
+  }
+
+  .count::before,
+  .count::after {
+    display: none;
+  }
+  header {
+    backdrop-filter: none;
   }
 }
