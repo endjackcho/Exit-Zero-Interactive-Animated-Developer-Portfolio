@@ -1043,4 +1043,8 @@ main .hero {
   .profilecard::before,.profilecard::after{
     display: none;
   }
+
+  .reveal {
+    transform: translateY(10%);
+  }
 }
