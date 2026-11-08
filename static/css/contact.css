@@ -1,0 +1,283 @@
+:root{
+  --main_background: #080a0b;
+}
+
+.count {
+  max-width: 1800px;
+  margin: 0 auto;
+  background: var(--main_background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--main_back_blue);
+  z-index: 0;
+  filter: blur(120px);
+  border-radius: 50%;
+  top: 50%;
+  left: 10%;
+  pointer-events: none;
+}
+
+.count::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--light);
+  z-index: 0;
+  filter: blur(120px);
+  border-radius: 50%;
+  top: 50%;
+  right: 10%;
+  pointer-events: none;
+}
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 90%;
+  height: 80px;
+  top: 20px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--blur);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border_2);
+  padding: 0 100px;
+}
+
+header .logo h1 {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header .logo h1:hover {
+  color: var(--slate);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+}
+
+main .formbox {
+  width: 500px;
+  height: max-content;
+  background: var(--border_1);
+  border: 1px solid var(--border_2);
+  border-radius: 20px;
+  padding: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+}
+
+.formbox .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formbox form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.title h1 {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+h1 .dots {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--white);
+  border-radius: 50%;
+  animation: 1.5s bounce ease-in-out infinite;
+}
+
+.dots:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dots:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+.name-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.formbox div {
+  position: relative;
+}
+
+.formbox input,
+.formbox textarea {
+  width: 100%;
+  font-size: 1em;
+  background: var(--border_2);
+  outline: none;
+  border: 1px solid var(--border_1);
+  color: var(--white);
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.formbox input:focus,
+.formbox textarea:focus {
+  border: 1px solid var(--slate);
+}
+
+.formbox input:focus ~ label,
+.formbox textarea:focus ~ label {
+  color: var(--slate);
+}
+
+.formbox input {
+  height: 40px;
+}
+
+.formbox label {
+  color: var(--white);
+  font-size: 0.9em;
+  font-weight: 900;
+  transition: 0.3s;
+}
+
+.formbox div label {
+  position: absolute;
+  top: -24px;
+  left: 0;
+}
+
+.formbox textarea {
+  height: 100%;
+  resize: none;
+}
+
+.formbox .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button .btn {
+  width: 100%;
+  height: 40px;
+  background: var(--slate);
+  color: #fff;
+  font-weight: 900;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.06);
+}
+
+.btn:active {
+  transform: scale(1);
+  opacity: 70%;
+}
+
+.formbox .end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.end a {
+  padding: 10px 20px;
+  border: 1px solid var(--border_2);
+  border-radius: 20px;
+  color: var(--clr);
+  transition: .3s;
+}
+
+.end a:hover{
+  transform: translateY(-10px) scale(1.06);
+}
+
+.arrow{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background: var(--border_1);
+    border: 1px solid var(--border_2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.arrow:hover{
+    transform: scale(1.06);
+}
+
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+
+  .count main .formbox {
+    width: 80%;
+  }
+
+  .name-email {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .title h1 {
+    font-size: 1em;
+  }
+}

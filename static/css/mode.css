@@ -1,0 +1,18 @@
+.light-mode {
+  --main_background: whitesmoke;
+  --border_1: #ebebeb;
+  --border_2: #c7c7c7;
+  --border_3: #afafaf;
+  --shadow: rgba(1, 1, 1, 0.3);
+  --white: #000;
+  --teal: teal;
+  --slate: slateblue;
+  --green: rgb(0, 0, 175);
+  --green_light: rgb(0, 0, 255);
+  --gray: rgba(66, 66, 66, 0.384);
+  --links: rgba(66, 66, 66, 0.685);
+  --blur_head: #00000067;
+  --main_back_blue: #e7f4fc;
+  --touch: rgba(255, 255, 255, 0.1);
+  --light: #00eeff10;
+}
