@@ -264,10 +264,12 @@ h1 .dots {
 
 
 @media (max-width: 600px) {
-  header {
-    justify-content: center;
+  header{
+    padding: 0 50px;
   }
-
+  body{
+    --light:transparent;
+  }
   .count main .formbox {
     width: 80%;
   }
@@ -279,5 +281,14 @@ h1 .dots {
 
   .title h1 {
     font-size: 1em;
+  }
+
+  .formbox input, .formbox textarea, .formbox .btn{
+    font-size: 17px;
+  }
+
+  .formbox .btn, .formbox input{
+    height: 50px;
+    border-radius: 25px;
   }
 }
