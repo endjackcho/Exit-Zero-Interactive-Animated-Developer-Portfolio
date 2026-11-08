@@ -19,7 +19,7 @@ const  observer = new IntersectionObserver((entries) => {
             entry.target.classList.add("active")
         }
     })
-},{threshold:0.25
+},{threshold:0.01
 })
 reveals.forEach((item) => {
     observer.observe(item)
