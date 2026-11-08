@@ -685,7 +685,7 @@ main .hero {
   transition: 1s;
 }
 
-/* .one.reveal {
+.one.reveal {
   transform: translateY(0) translateX(300px);
   transition: 1s ease;
 }
@@ -693,7 +693,7 @@ main .hero {
 .two.reveal {
   transform: translateY(0) translateX(-300px);
   transition: 1s ease;
-} */
+}
 
 .reveal.active {
   opacity: 1;
