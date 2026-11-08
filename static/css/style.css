@@ -977,6 +977,10 @@ main .hero {
     --light:transparent;
   }
 
+  main .one.reveal, main .two.reveal{
+    transform: translateX(0) translateY(0) !important;
+  }
+
   *{
     animation: none;
     margin: 0;
