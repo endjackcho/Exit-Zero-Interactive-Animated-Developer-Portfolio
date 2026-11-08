@@ -99,6 +99,10 @@ header #active {
   color: var(--white);
 }
 
+main{
+  margin: 0 auto;
+}
+
 main .hero {
   position: relative;
   width: 100%;
@@ -681,7 +685,7 @@ main .hero {
   transition: 1s;
 }
 
-.one.reveal {
+/* .one.reveal {
   transform: translateY(0) translateX(300px);
   transition: 1s ease;
 }
@@ -689,7 +693,7 @@ main .hero {
 .two.reveal {
   transform: translateY(0) translateX(-300px);
   transition: 1s ease;
-}
+} */
 
 .reveal.active {
   opacity: 1;
@@ -851,6 +855,16 @@ main .hero {
 }
 
 @media (max-width: 650px) {
+  .count .hero{
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+  }
+  .hero .welc{
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
   .reveal {
     transform: translateX(0) translateY(50px);
     opacity: 0;
@@ -959,8 +973,26 @@ main .hero {
 }
 
 @media (max-width: 450px) {
-  main .hero .welc {
-    width: 90%;
+  body{
+    --light:transparent;
+  }
+
+  *{
+    animation: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .count .hero{
+    justify-content: space-between;
+  }
+  .hero .welc {
+    width: 80%;
+    align-items: center;
+  }
+
+   .hero .json{
+    width: 300px;
   }
   main .hero .welc::before {
     top: -10%;
@@ -992,11 +1024,19 @@ main .hero {
   }
 
   .cards .card {
-    width: 90%;
+    width: 90% !important;
   }
 
   main .about section {
     max-height: 200px;
     overflow-y: scroll;
+  }
+
+  .profilecard{
+    border: 1px solid var(--border_2);
+  }
+
+  .profilecard::before,.profilecard::after{
+    display: none;
   }
 }
